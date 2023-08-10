@@ -1,7 +1,5 @@
-FROM adoptopenjdk:17-jre-hotspot
-
-WORKDIR /app
-
-COPY target/docker_example-1.0.jar /app/docker_example-1.0.jar
-
-CMD ["java", "-jar", "docker_example-1.0.jar"]
+FROM openjdk:17-jdk-slim
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+EXPOSE 9090
+ENTRYPOINT ["java", "-jar", "/app.jar"]
