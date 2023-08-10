@@ -8,6 +8,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String check() {
-        return "I'm alive Spring boot app inside docker image, mfckr!";
+        return "I'm alive Spring boot app inside docker image, mfckrrrrrrr!";
     }
 }
