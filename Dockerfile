@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-slim as builder
 WORKDIR /opt/app
-COPY .mvn/ .mvn
+COPY /opt/apache-maven-3.9.2 .mvn
 COPY mvnw pom.xml ./
 RUN ./mvnw dependency:go-offline
 COPY ./src ./src
